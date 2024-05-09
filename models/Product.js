@@ -38,7 +38,9 @@ Product.init(
     },
     category_id:{
       type:DataTypes.INTEGER,
-      references:{model:'category', key:'id'}//equix of foreign key in raw sequel?
+      references:{model:'category', key:'id'},
+      onDelete:'SET NULL'
+      //equix of foreign key in raw sequel?
       //references the 'id' attribute of the 'Category' model
 
     }
